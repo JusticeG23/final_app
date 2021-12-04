@@ -6,6 +6,7 @@ import 'package:final_app/screens/device_control_webview_screen.dart';
 // File imports
 import 'package:final_app/screens/initialize_frames_screen.dart';
 import 'package:final_app/screens/landing_screen.dart';
+import 'package:final_app/screens/pictures_screen.dart';
 
 //////////////////////////////////////////////////////////////////
 // StateLESS widget which only has data that is initialized when
@@ -19,13 +20,13 @@ class AppDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Finals used in this widget
-    final user = FirebaseAuth.instance.currentUser;
+    // final user = FirebaseAuth.instance.currentUser;
 
     return Drawer(
       child: Column(
         children: <Widget>[
           AppBar(
-            title: Text('Hello'),
+            title: Text('Navigation'),
             automaticallyImplyLeading: false,
           ),
           Divider(),
@@ -35,6 +36,15 @@ class AppDrawer extends StatelessWidget {
             onTap: () {
               Navigator.of(context)
                   .pushReplacementNamed(LandingScreen.routeName);
+            },
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.photo),
+            title: Text('Pictures'),
+            onTap: () {
+              Navigator.of(context)
+                  .pushReplacementNamed(PicturesScreen.routeName);
             },
           ),
           Divider(),

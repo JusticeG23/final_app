@@ -1,4 +1,5 @@
 // Flutter imports
+import 'package:final_app/screens/pictures_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:final_app/screens/device_control_webview_screen.dart';
@@ -39,10 +40,10 @@ class MyApp extends StatelessWidget {
       builder: (context, appSnapshot) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Globe Frames',
+          title: 'Instafam',
           theme: ThemeData(
-            primarySwatch: Colors.grey,
-            backgroundColor: Colors.blueGrey,
+            primarySwatch: Colors.pink,
+            backgroundColor: Colors.yellow.shade700,
             accentColor: Colors.black,
             splashColor: Colors.indigo,
             accentColorBrightness: Brightness.dark,
@@ -63,6 +64,7 @@ class MyApp extends StatelessWidget {
           ),
           home: LandingScreen(),
           routes: {
+            PicturesScreen.routeName: (ctx) => PicturesScreen(),
             // AuthScreen.routeName: (ctx) => AuthScreen(),
             // LandingScreen.routeName: (ctx) => LandingScreen(),
             // InitializeFramesScreen.routeName: (ctx) => InitializeFramesScreen(),

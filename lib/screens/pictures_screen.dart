@@ -26,12 +26,16 @@ class PicturesScreen extends StatefulWidget {
 class _PicturesScreenState extends State<PicturesScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: Theme.of(context).backgroundColor,
+      backgroundColor: Colors.grey,
       appBar: AppBar(
         title: Text('Pictures'),
       ),
       drawer: AppDrawer(),
       body: GridView.count(
         crossAxisCount: 4,
+        mainAxisSpacing: 10,
+        crossAxisSpacing: 10,
         children: picturesList
             .map(
               (word) => Container(
@@ -43,18 +47,6 @@ class _PicturesScreenState extends State<PicturesScreen> {
               ),
             )
             .toList(),
-        // <Widget>[
-        //   Container(
-        //     child: Image.network(
-        //       'https://live.staticflickr.com/4043/4438260868_cc79b3369d_z.jpg',
-        //       height: 60.0,
-        //       fit: BoxFit.cover,
-        //     ),
-        //   ),
-        //   Container(
-        //     child: Text('long information text'),
-        //   ),
-        // ],
       ),
     );
   }

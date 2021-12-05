@@ -65,6 +65,8 @@ class MyApp extends StatelessWidget {
           home: LandingScreen(),
           routes: {
             PicturesScreen.routeName: (ctx) => PicturesScreen(),
+            // Despite being the default, if you want to come back, you need to name it in routes
+            LandingScreen.routeName: (ctx) => LandingScreen(),
             // AuthScreen.routeName: (ctx) => AuthScreen(),
             // LandingScreen.routeName: (ctx) => LandingScreen(),
             // InitializeFramesScreen.routeName: (ctx) => InitializeFramesScreen(),

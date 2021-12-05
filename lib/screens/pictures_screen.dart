@@ -23,6 +23,7 @@ class PicturesScreen extends StatefulWidget {
   _PicturesScreenState createState() => _PicturesScreenState();
 }
 
+// Creates a screen for viewing pictures as grid with default layout
 class _PicturesScreenState extends State<PicturesScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,12 +31,24 @@ class _PicturesScreenState extends State<PicturesScreen> {
       backgroundColor: Colors.grey,
       appBar: AppBar(
         title: Text('Pictures'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.add,
+              color: Colors.white,
+            ),
+            onPressed: null,
+          ),
+        ],
       ),
       drawer: AppDrawer(),
+      // Create the Gridview.count for minimal dependencies
       body: GridView.count(
+        // Defined layout values
         crossAxisCount: 4,
         mainAxisSpacing: 10,
         crossAxisSpacing: 10,
+        // Contructs containers from element from list picturesList
         children: picturesList
             .map(
               (word) => Container(

@@ -82,31 +82,41 @@ class _LandingScreenState extends State<LandingScreen> {
         title: Text('Globe Frames'),
       ),
       drawer: AppDrawer(),
-      body: Column(
-        children: [
-          Text("USER:"),
-          // Text("Email: ${_user!.email}"),
-          // Text("Display Name: ${_user!.displayName}"),
-          // Text("Email Verified: ${_user!.emailVerified}"),
-          // Text("UID: ${_user!.uid}"),
-          // FutureBuilder(
-          //     future: _tokenFuture,
-          //     builder: (context, appSnapshot) {
-          //       if (appSnapshot.connectionState == ConnectionState.waiting)
-          //         return CircularProgressIndicator();
-          //       else if (appSnapshot.hasData && !(appSnapshot.data as bool))
-          //         return Text("Token: COULD NOT GENERATE");
-          //       else
-          //         return Column(
-          //           children: [
-          //             Text("Refresh Token: $_refreshToken"),
-          //             Text("Token: $_token"),
-          //             Text(
-          //                 "Token Expiration: ${DateFormat('MM/dd/yyyy hh:mm:ss').format(_tokenExpireDate)}"),
-          //           ],
-          //         );
-          //     }),
-        ],
+      body: Align(
+        alignment: Alignment.center,
+        child: Column(
+          children: [
+            Text("\n\n\n\n\n\n\nHello, user"),
+
+            Image.network(
+              'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.ZU3R2kA6F4sB7ek1hFWdfAHaEC%26pid%3DApi&f=1',
+              // height: 60.0,
+              fit: BoxFit.cover,
+            ),
+
+            // Text("Email: ${_user!.email}"),
+            // Text("Display Name: ${_user!.displayName}"),
+            // Text("Email Verified: ${_user!.emailVerified}"),
+            // Text("UID: ${_user!.uid}"),
+            // FutureBuilder(
+            //     future: _tokenFuture,
+            //     builder: (context, appSnapshot) {
+            //       if (appSnapshot.connectionState == ConnectionState.waiting)
+            //         return CircularProgressIndicator();
+            //       else if (appSnapshot.hasData && !(appSnapshot.data as bool))
+            //         return Text("Token: COULD NOT GENERATE");
+            //       else
+            //         return Column(
+            //           children: [
+            //             Text("Refresh Token: $_refreshToken"),
+            //             Text("Token: $_token"),
+            //             Text(
+            //                 "Token Expiration: ${DateFormat('MM/dd/yyyy hh:mm:ss').format(_tokenExpireDate)}"),
+            //           ],
+            //         );
+            //     }),
+          ],
+        ),
       ),
     );
   }

@@ -1,10 +1,6 @@
 // Flutter imports
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:final_app/screens/device_control_webview_screen.dart';
-
-// File imports
-import 'package:final_app/screens/initialize_frames_screen.dart';
 import 'package:final_app/screens/landing_screen.dart';
 import 'package:final_app/screens/pictures_screen.dart';
 
@@ -43,7 +39,7 @@ class AppDrawer extends StatelessWidget {
                     color: Colors.white,
                   ),
                   title: Text(
-                    'Home',
+                    'Landing',
                     style: TextStyle(color: Colors.white),
                     textScaleFactor: 2,
                   ),

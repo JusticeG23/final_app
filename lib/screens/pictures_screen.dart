@@ -63,7 +63,7 @@ void makePost(context) {
     Post(
         user: 'test',
         imageUrl:
-            'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.K-9pEHbDQ-brsF7YrjO46QHaEK%26pid%3DApi&f=1',
+            'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.RcMo9n0zY5wL7ULr5smhMwHaEK%26pid%3DApi&f=1',
         caption: 'test'),
   );
   // }
@@ -146,6 +146,9 @@ class _PicturesScreenState extends State<PicturesScreen> {
       drawer: AppDrawer(),
       // Create the Gridview.count for minimal dependencies
       body: Container(
+        decoration: BoxDecoration(
+            // border: Border.all(),
+            color: Colors.black),
         child: GridView.count(
           // Defined layout values
           crossAxisCount: 4,
@@ -155,6 +158,12 @@ class _PicturesScreenState extends State<PicturesScreen> {
           children: (picturesList.reversed.toList() as List<Post>)
               .map(
                 (post) => Container(
+                  decoration: BoxDecoration(
+                      // border: Border.all(),
+                      // borderRadius: BorderRadius.all(
+                      //   Radius.circular(25),
+                      // ),
+                      ),
                   child: Image.network(
                     post.imageUrl,
                     height: 60.0,

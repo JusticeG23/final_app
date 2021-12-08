@@ -4,7 +4,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 // File imports
-import './auth_screen.dart';
 import './landing_screen.dart';
 
 //////////////////////////////////////////////////////////////////
@@ -35,7 +34,7 @@ class SplashScreen extends StatelessWidget {
               if (userSnapshot.connectionState == ConnectionState.waiting)
                 return Text('Authenticating user...');
               else if (!userSnapshot.hasData)
-                return AuthScreen();
+                return new Container();
               else
                 return LandingScreen();
             },

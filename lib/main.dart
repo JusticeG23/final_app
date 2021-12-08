@@ -2,14 +2,10 @@
 import 'package:final_app/screens/pictures_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:final_app/screens/device_control_webview_screen.dart';
 
 // File imports
-import './screens/device_control_webview_screen.dart';
-import './screens/initialize_frames_screen.dart';
 import './screens/landing_screen.dart';
 import './screens/splash_screen.dart';
-import './screens/auth_screen.dart';
 
 //////////////////////////////////////////////////////////////////
 // MAIN entry point to start app.

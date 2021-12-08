@@ -28,6 +28,8 @@ dependencies:
   shared_preferences: ^2.0.6
   intl: ^0.17.0
   webview_flutter: ^2.0.12
+  # image_collage_widget: ^1.0.0
+  # basic_image_gallery: "^0.0.1"
 
 
   

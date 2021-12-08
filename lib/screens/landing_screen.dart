@@ -86,7 +86,9 @@ class _LandingScreenState extends State<LandingScreen> {
         alignment: Alignment.center,
         child: Column(
           children: [
-            Text("\n\n\n\n\n\n\nHello, user"),
+            Text(
+              "\n\n\n\n\n\n\nHello, user",
+            ),
 
             Image.network(
               'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.ZU3R2kA6F4sB7ek1hFWdfAHaEC%26pid%3DApi&f=1',

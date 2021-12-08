@@ -21,7 +21,11 @@ class AppDrawer extends StatelessWidget {
             canvasColor: Colors.transparent,
           ),
           child: Container(
-            color: Colors.transparent,
+            // decoration: BoxDecoration(
+            //     border: Border.all(),
+            //     borderRadius: BorderRadius.all(Radius.circular(20)),
+            //     color: Colors.red),
+            color: Colors.black.withOpacity(0.36),
             child: Column(
               children: <Widget>[
                 // AppBar(

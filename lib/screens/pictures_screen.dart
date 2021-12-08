@@ -6,6 +6,7 @@
 import 'dart:convert';
 
 // Flutter imports
+import 'package:final_app/providers/post.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -49,11 +50,11 @@ class _PicturesScreenState extends State<PicturesScreen> {
         mainAxisSpacing: 10,
         crossAxisSpacing: 10,
         // Contructs containers from element from list picturesList
-        children: picturesList
+        children: (picturesList as List<Post>)
             .map(
-              (word) => Container(
+              (post) => Container(
                 child: Image.network(
-                  word,
+                  post.imageUrl,
                   height: 60.0,
                   fit: BoxFit.cover,
                 ),
